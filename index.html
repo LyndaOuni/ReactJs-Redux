@@ -12,10 +12,20 @@
     <div id="app"></div>
     <script type="text/babel">
       class App extends React.Component {
+          state= {
+              name: 'lynda',
+              age: 25,
+          }
+        handleClick = (e) => {
+             this.setState({
+                 name: 'Cynda'
+             })
+        }
         render(){
           return(
             <div className="app-content">
-              <h1>Hello</h1>
+              <h1>Hello, {this.state.name}</h1>
+              <button onClick= {this.handleClick}> Click Me</button>
             </div>
           )
         }
